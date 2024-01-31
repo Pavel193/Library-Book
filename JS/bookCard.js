@@ -1,10 +1,10 @@
 import { containerCard } from "./constants.js";
 
 export function renderBookCard (cardData, index){
-    const distant = 8
+    const distant = 10
     const card = document.createElement('div')
     card.classList.add('bookCard')
-    card.style = `transform: translateX(${distant * index}px) rotate(${index}deg); z-index: ${100-index}`
+    card.style = `transform: translateX(${distant * index}px) rotate(${index * 0.3}deg); z-index: ${100-index}`
     card.innerHTML = `
     <div class="cardInfo"  style="background-image: url(${cardData.img})">
         <h2 class="cardName">${cardData.name}</h2>

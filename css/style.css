@@ -93,9 +93,9 @@ body{
 }
 .cardAction {
     display: flex;
-    width: 100%;
-    justify-content: center;
-    gap: 38px;
+    max-width: 230px;
+    margin: auto;
+    justify-content: space-between;
     padding-top: 18px;
     
 }
@@ -135,6 +135,9 @@ body{
     display: flex;
     justify-content: center;
     align-items: flex-end;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 .modal {
     margin-bottom: 30px;
@@ -264,4 +267,8 @@ body{
     height: calc(65vh - 200px);
     overflow-y: scroll;
     
+}
+
+.none {
+    display: none;
 }

@@ -1,7 +1,7 @@
 @media (max-width: 500px) {
     .wrapper {
         width: 100%;
-        padding: 20px 15px;
+        padding: 10px 15px;
         background: linear-gradient(180deg, #A48559 -20.31%, #02131B 100%);
         height: 100vh;
         gap: 20px;
@@ -9,6 +9,7 @@
     .header {
         display: flex;
         justify-content: space-between;
+        align-items: center;
         height: 40px;
     }
     .burger-icon {
@@ -46,11 +47,11 @@
         
     }
     .bookCard{
-        padding: 9px 9px 15px 9px;
+        padding: 9px 5px 15px 5px;
         background-color: white;
         border-radius: 31px;
-        width: 100%;
-        max-width: 337px;
+        width: 90%;
+       
        
     }
     .cardInfo{
@@ -58,7 +59,7 @@
         border-radius: 31px;
         width: 100%;
         height: calc(100vh - 306px);
-        max-height: 440px;
+        max-height: 480px;
         background-position: bottom;
         background-repeat: no-repeat;
         display: flex;

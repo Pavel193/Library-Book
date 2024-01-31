@@ -1,3 +1,5 @@
+import { modal } from "./constants.js"
+
 function delay(callback, s){
    return setTimeout(callback, s)
 }
@@ -7,9 +9,8 @@ actionCard(card, arr, 'swipeLeft')
 }
 
 export function swapRight(card,arr) {
-    actionCard(card, arr , 'swipeRight')
-
-    
+    actionCard(card, arr, 'swipeRight')
+  
 }
 
 function actionCard(card, arr , className){
@@ -20,4 +21,17 @@ function actionCard(card, arr , className){
     arr.forEach((item, index)=> {
         item.style = `transform: translateX(${distant * index}px) rotate(${index}deg); z-index: ${100-index}`
     })
+}
+
+export function openModal(card){
+    const {bookData, bookCard} = card
+    const imageUrl = bookCard.querySelector('.cardInfo').style.backgroundImage
+    modal.style.backgroundImage = imageUrl
+    const modalDescription  = modal.querySelector('.bookDescription')
+    modalDescription.textContent = bookData.description
+    modal.classList.remove('none')
+}
+export function closeModal () {
+    modal.style.backgroundImage = ''
+    modal.classList.add('none')
 }
