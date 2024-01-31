@@ -1,0 +1,267 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body{
+    background-color: black;
+}
+
+
+.wrapper {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    overflow: hidden;
+}
+.header {
+    
+}
+.burger-icon {
+    background-image: url(../img/burgerIcon.svg);
+    width: 22px;
+    height: 22px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.profile-photo img {
+    width: 40px;
+    height: 40px;
+}
+.search {
+}
+.searchBook {
+}
+.loop-icon {
+}
+.searchText {
+    width: 100%;
+}
+.navBook {
+}
+.bookContainer {
+}
+.footer {
+}
+.navLinks {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+}
+.navHome {
+    background-image: url(../img/homeIcon.svg);
+}
+.navCompas {
+    background-image: url(../img/NavIcon.svg);
+}
+.navLike {
+    background-image: url(../img/likeIcon.svg);
+}
+.navUser {
+    background-image: url(../img/UserIcon.svg);
+}
+
+.navItem{
+    width: 29px;
+    height: 29px;
+    background-repeat: no-repeat;
+    display: block;
+    background-size: cover;
+}
+
+.bookContainer {
+    position: relative;
+}
+.bookCard {
+   position: absolute;
+   transition: 1s;
+   left: 0;
+}
+
+.swipeLeft {
+    left: -1000px;
+}
+.cardInfo {
+  
+}
+.cardName {
+}
+.cardAutor {
+}
+.cardAction {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    gap: 38px;
+    padding-top: 18px;
+    
+}
+.closeButton {
+    background-image: url(../img/closeCard.svg);
+}
+.enterButton {
+    background-image: url(../img/enterCard.svg);  
+}
+.likeButton {
+    background-image: url(../img/likeCard.svg);
+}
+
+.buttonsCard{
+    width: 50px;
+    height: 50px;
+    background-position: center;
+    display: block;
+    background-size: 21px;
+    background-repeat: no-repeat;
+    border-radius: 13px;
+    border: none;
+}
+
+.swipeRight{
+    left: 1000px;
+}
+
+.modalOverlay {
+    background-color: rgba(0, 0, 0, 0.507);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 99999;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+.modal {
+    margin-bottom: 30px;
+    background-color: white;
+    width: 335px;
+    height: 65vh;
+    border-radius: 31px;
+    padding: 41px 13px;
+    padding-left: 20px;
+    padding-right: 20px;
+    position: relative;
+}
+
+.btnModal{
+    position: absolute;
+    top: -10px;
+    right: 22px;
+    display: flex;
+    align-items: center;
+    gap: 9px;
+}
+.likeModal {
+    background-image: url(../img/heartBtnModal.svg);
+    width: 36px;
+    height: 36px;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 10.778px;
+    background-color: #FFF;
+    box-shadow: 0px 2.694px 9.879px 0px rgba(0, 0, 0, 0.15);
+    border: none;
+
+    
+}
+.reading {
+    background-image: url(../img/footstepsBtnModal.svg);
+    border-radius: 10.778px;
+    background-color: #F3FF47;
+    box-shadow: 0px 2.694px 9.879px 0px rgba(0, 0, 0, 0.24);
+    width: 66px;
+    height: 36px;
+    background-repeat: no-repeat;
+    border: none;
+    background-position-y: center;
+    background-position-x: 13px;
+    padding-left: 26px;
+
+    
+}
+.data {
+    color: #354249;
+    font-family: Inter;
+    font-size: 10.778px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+.bookName {
+    color: #02131B;
+    font-family: Inter;
+    font-size: 21.555px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-top: 10px;
+}
+.bookAuthor {
+    color: #354249;
+    font-family: Inter;
+    font-size: 12.574px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+.raitingContainer {
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    gap: 18px;
+    margin-bottom: 20px;
+    
+    
+}
+.raitingBook {
+    background-color: antiquewhite;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+    padding-right: 15px;
+    border: none;
+    height: 30px;
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-position-x: 10px;
+    color: #79532A;
+    font-family: Inter;
+    font-size: 10.778px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    
+    
+}
+.raiting {
+    background-image: url(../img/RatingModal.svg);
+    
+   
+}
+.looks {
+    background-image: url(../img/looksModal.svg);
+
+}
+.dateRaiting {
+    background-image: url(../img/DateModal.svg);
+    
+}
+.bookDescription {
+    color: #354249;
+    font-family: Inter;
+    font-size: 12.574px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 23.351px; /* 185.714% */
+    height: calc(65vh - 200px);
+    overflow-y: scroll;
+    
+}

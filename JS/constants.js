@@ -1,0 +1,1 @@
+export const containerCard = document.querySelector('.bookContainer')
