@@ -1,3 +1,8 @@
 export const containerCard = document.querySelector('.bookContainer')
+export const containerCardLike = document.querySelector('.bookContainer-like')
 export const modal = document.querySelector('.modalOverlay')
 export const formAuth = document.querySelector('.modalform')
+export const dataUser = document.querySelector('.dataUser')
+export const registratedUser = document.querySelector('.registratedUser')
+export const exitBtn = document.querySelector('.exitBtn')
+export const saveBook = document.querySelector('.likedBook')

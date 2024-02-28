@@ -292,10 +292,6 @@ body{
 
 
 
-.none {
-    display: none;
-}
-
 
 .regWindow {
     height: calc(100vh - 225px);
@@ -388,4 +384,8 @@ body{
 
 .modalOverlay-registry .modal {
     height: 350px;
+}
+
+.none {
+    display: none;
 }
