@@ -27,7 +27,17 @@ export function openModal(card){
     const {bookData, bookCard} = card
     const imageUrl = bookCard.querySelector('.cardInfo').style.backgroundImage
     modal.style.backgroundImage = imageUrl
+    const authorBook = modal.querySelector('.bookAuthor')
     const modalDescription  = modal.querySelector('.bookDescription')
+    const nameBook = modal.querySelector('.bookName')
+    const ratingBook = modal.querySelector('.raiting')
+    const looksBook = modal.querySelector('.looks')
+    const dataRaiting = modal.querySelector ('.dataRaiting')
+    dataRaiting.textContent = bookData.data
+    looksBook.textContent = bookData.looks
+    ratingBook.textContent = bookData.raiting
+    nameBook.textContent = bookData.name
+    authorBook.textContent = bookData.author 
     modalDescription.textContent = bookData.description
     modal.classList.remove('none')
 }

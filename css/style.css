@@ -14,6 +14,7 @@ body{
     flex-direction: column;
     gap: 20px;
     overflow: hidden;
+    
 }
 .header {
     
@@ -62,6 +63,22 @@ body{
 }
 .navUser {
     background-image: url(../img/UserIcon.svg);
+}
+
+.activeNavUser{
+    background-image: url(../img/UserIcon-active.svg);
+}
+
+.activeNavHome{
+    background-image: url(../img/homeIcon-active.svg);
+}
+
+.activeNavLike{
+    background-image: url(../img/likeIconActive.svg);
+}
+
+.activeNavCompas{
+    background-image: url(../img/NavIconActive.svg);
 }
 
 .navItem{
@@ -253,7 +270,7 @@ body{
     background-image: url(../img/looksModal.svg);
 
 }
-.dateRaiting {
+.dataRaiting {
     background-image: url(../img/DateModal.svg);
     
 }
@@ -269,6 +286,106 @@ body{
     
 }
 
+.regWindow{
+    height: 300px;
+}
+
+
+
 .none {
     display: none;
+}
+
+
+.regWindow {
+    height: calc(100vh - 225px);
+    position: relative;
+    margin-top: 100px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 50px;
+
+}
+.registratedUser {
+    position: relative;
+    z-index: 3;
+    display: flex;
+    justify-content: space-between;
+}
+.registratedUserLink {
+    font-size: 22px;
+    border: 2px solid black;
+    border-radius: 8px;
+    background-color: #dfe494;
+    color: #02131B;
+    padding: 8px 16px;
+    text-decoration: none;
+   
+}
+.dataUser {
+    position: relative;
+    z-index: 3;
+    margin-top: 20px;
+}
+.userAvatar {
+    background-image: url(../img/avatarIcon.svg);
+    width: 125px;
+    height: 125px;
+    background-size: cover;
+    margin: auto;
+    margin-bottom: 50px;
+    border: #02131B solid 0.5px;
+    border-radius: 10px;
+
+}
+.UserName {
+    color: #f6f1c3;
+    font-size: 24px;
+}
+.UserMail {
+    margin: 30px 0;
+    color: #f6f1c3;
+    font-size: 24px;
+}
+.editBtn {
+    height: 40px;
+    
+}
+.modalOverlay-auth{
+    align-items: center;
+
+}
+
+.modalOverlay-auth .modal{
+    height: 300px;
+    
+}
+
+.modal_title {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 35px;
+    
+}
+.modalform {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+
+}
+.modalform_input {
+    font-size: 20px;
+}
+.modalform_submit {
+    font-size: 20px;
+    padding: 10px 0;
+}
+.modalOverlay-registry {
+    align-items: center;
+}
+
+.modalOverlay-registry .modal {
+    height: 350px;
 }
