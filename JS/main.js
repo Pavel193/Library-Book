@@ -1,7 +1,7 @@
 import { arrBook } from "./dataBook.js";
 import { renderBookCard } from "./bookCard.js";
-import { closeCard, swapRight, openModal, closeModal } from "./functions.js";
-import { modal } from "./constants.js";
+import { closeCard, swapRight, openModal, closeModal , nextPage, backPage } from "./functions.js";
+import { modal,controllerDown, controllerUp } from "./constants.js";
 import { getUserData, setUserData } from "./middleware/user.js"
 const user = getUserData()
 
@@ -17,7 +17,6 @@ arrCards.forEach((card) => {
     rightBtn.addEventListener('click', () => {
         swapRight(bookCard, arrCards)
         if(user){
-            
             user.saveBooks = [...user.saveBooks, bookData]
             setUserData(user)
         }
@@ -27,3 +26,7 @@ arrCards.forEach((card) => {
 })
 
 modal.addEventListener('click', closeModal)
+
+controllerDown.addEventListener('click', nextPage) 
+// надо чтобы при клике вызывалась функция которая очищает поле с текстом и вставляет следующий элемент массива arrPage
+controllerUp.addEventListener('click', backPage)

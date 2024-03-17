@@ -386,6 +386,42 @@ body{
     height: 350px;
 }
 
+.readBook{
+    position: absolute;
+    z-index: 999;
+    top: 40px;
+    left: 0;
+    right: 0;
+    bottom: 75px;
+    background-color: wheat;
+    padding: 20px 35px 20px 20px;
+}
+
+.footerReadbook{
+    position: absolute;
+    width: 35px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    align-items: center;
+    justify-content: space-around;
+    background-color: gray;
+    border-radius: 6px 0 0 6px;
+}
+.footerReadbook .controller{
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    transform: rotate(-90deg);
+    font-size: 22px;
+}
+.footerReadbook .page{
+    font-size: 25px;
+    color: white;
+}
+
 .none {
     display: none;
 }

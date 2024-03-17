@@ -1,12 +1,10 @@
 import { formAuth } from "./constants.js";
+export const closeAutorizatition = document.querySelector('.closeModal')
 
 const userPattern = {
     login: 'admin',
     password: 'admin'
 }
-
-
-
 
 function formSubmit(event){
     event.preventDefault()
@@ -18,5 +16,5 @@ function formSubmit(event){
 }
 
 formAuth.addEventListener('submit',formSubmit )
-
+closeAutorizatition.addEventListener('click', () => window.history.back())
 
