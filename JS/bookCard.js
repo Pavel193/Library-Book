@@ -4,7 +4,7 @@ export function renderBookCard (cardData, index){
     const distant = 10
     const card = document.createElement('div')
     card.classList.add('bookCard')
-    card.style = `transform: translateX(${distant * index}px) rotate(${index * 0.3}deg); z-index: ${100-index}`
+    card.style = `z-index: ${100-index}`
     card.innerHTML = `
     <div class="cardInfo"  style="background-image: url(${cardData.img})">
     <div class="NameBookText">

@@ -1,7 +1,7 @@
 @media (max-width: 500px) {
     .wrapper {
         width: 100%;
-        padding: 10px 15px;
+        padding: 10px 0px;
         background-image: url(../img/);
         height: 100vh;
         gap: 20px;
@@ -52,12 +52,12 @@
         height: 36px;
     }
     .bookContainer {
-        /* height: calc(100vh - 230px); */
+        height: calc(100vh - 200px);
         border-radius: 16px;
         display: flex;
         /* align-items: center; */
         justify-content: center;
-        margin-top: 60px;
+        margin-top: 30px;
         
     }
     .bookContainer-like {
@@ -74,8 +74,8 @@
     .bookCard{
         padding: 9px 5px 15px 5px;
         background-color: white;
-        border-radius: 31px;
-        width: 90%;
+        border-radius: 0px;
+        width: 100%;
        
        
     }
@@ -91,8 +91,7 @@
         background-size: cover;
         border-radius: 31px;
         width: 100%;
-        height: calc(100vh - 270px);
-        max-height: 480px;
+        height: calc(100vh - 205px);
         background-position: bottom;
         background-repeat: no-repeat;
         display: flex;
@@ -244,6 +243,10 @@
         gap: 10px;
         overflow-y: scroll;
         height: calc(100vh - 255px);
+    }
+    .mainReadBook{
+        width: 100%;
+        font-size: 2vh;
     }
 
 }

@@ -1,5 +1,6 @@
 import { modal, readBook, arrPage, pageSection, containerSearchBooks} from "./constants.js"
 import { arrBook } from "./dataBook.js"
+import { readBookData } from "./middleware/user.js"
 
 
 function delay(callback, s){
@@ -43,14 +44,18 @@ export function openModal(card){
     modalDescription.textContent = bookData.description
     modal.classList.remove('none')
     const readBook = document.querySelector('.reading')
-    readBook.addEventListener('click', () =>  openBook(bookData))
+    readBook.addEventListener('click', () => {
+        readBookData.setReadBook(bookData, 0)
+        window.location.href = './readBook.html'
+    })
+    // readBook.addEventListener('click', () =>  openBook(bookData))
 }
 export function closeModal () {
     modal.style.backgroundImage = ''
     modal.classList.add('none')
 }
 
-export function openBook (bookData) {
+export function openBook (bookData, page) {
     readBook.classList.remove('none')
     const book = bookData.book
     const arrBook = book.split('  ')
@@ -58,7 +63,7 @@ export function openBook (bookData) {
     for(let i = 0; i <= Math.ceil(arrBook.length / lengthPage); i++){
         arrPage.push(arrBook.splice(i, lengthPage))
     }
-    pageSection.textContent = arrPage[0].join('  ')
+    pageSection.textContent = arrPage[page].join('  ')
 }
 
 export function clearPage(){
