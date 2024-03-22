@@ -41,7 +41,7 @@ body{
 }
 .navBook {
 }
-.bookContainer {
+.contentContainer  {
 }
 .footer {
 }
@@ -87,9 +87,11 @@ body{
     background-repeat: no-repeat;
     display: block;
     background-size: cover;
+    border: none;
+    background-color: rgba(0, 0, 0, 0);
 }
 
-.bookContainer {
+.contentContainer  {
     position: relative;
 }
 .bookCard {

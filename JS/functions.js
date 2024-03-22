@@ -1,6 +1,7 @@
 import { modal, readBook, arrPage, pageSection, containerSearchBooks} from "./constants.js"
 import { arrBook } from "./dataBook.js"
 import { readBookData } from "./middleware/user.js"
+import { state } from "./templates/state.js"
 
 
 function delay(callback, s){
@@ -102,4 +103,13 @@ export function searchingBook(event, render){
     })  // test - Метод для регулярных выражений поиска подстроки в строке (может найти букву в слове , либо предложение) 
     filterBooks.forEach((item) => render(item, openModal))
     console.log(filterBooks);
+}
+
+
+export function changePage(item){
+    const itemPath = item.getAttribute('data-href')
+    console.log(itemPath)
+    state.clearWrapper()
+    state.searchBook.renderFunc()
+    window.history.pushState('page2', 'Title', itemPath);
 }

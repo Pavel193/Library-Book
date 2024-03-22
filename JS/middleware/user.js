@@ -8,7 +8,7 @@ export const readBookData = {
         localStorage.setItem('readBook', JSON.stringify(this))
     },
     getReadBook: function(){
-        const obj = JSON.parse(localStorage.getItem('readBook'))
+        const obj = JSON.parse(localStorage.getItem('readBook')) || {}
         this.saveBooks = obj.saveBooks
         this.readingBook = obj.readingBook
     }
