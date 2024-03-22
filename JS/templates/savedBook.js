@@ -1,7 +1,7 @@
-import { getUserData, setUserData } from "./middleware/user.js";
-import { renderLikeCard } from "./bookCard.js";
+import { getUserData, setUserData } from "../middleware/user.js";
+import { renderLikeCard } from "../bookCard.js";
 
-window.addEventListener('DOMContentLoaded', () => {
+export function renderSavedBook() {
     const user = getUserData()
     if(!user) return
     const arrCards = user.saveBooks.map((book) => ({card: renderLikeCard(book), data: book}))
@@ -13,9 +13,5 @@ window.addEventListener('DOMContentLoaded', () => {
             setUserData(user)
             card.remove()
         })
-
     });
-})
-
-
-console.log(getUserData())
+}

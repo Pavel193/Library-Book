@@ -94,7 +94,7 @@ export function backPage(){
     
 }
 
-export function searchingBook(event, render){
+export function searchingBook(event, render, containerSearchBooks){
     containerSearchBooks.innerHTML = ''
     const input = event.target
     const value = new RegExp(input.value.toLowerCase())// new RegExp - создание регулярного выражения из строки (нужно для использования методов test match replace)
@@ -108,8 +108,9 @@ export function searchingBook(event, render){
 
 export function changePage(item){
     const itemPath = item.getAttribute('data-href')
-    console.log(itemPath)
+    // console.log(itemPath)
     state.clearWrapper()
-    state.searchBook.renderFunc()
-    window.history.pushState('page2', 'Title', itemPath);
+    state[itemPath].renderFunc()
+    // window.history.pushState('page2', 'Title', itemPath);
+    // window.dispatchEvent(new Event('popstate'));
 }

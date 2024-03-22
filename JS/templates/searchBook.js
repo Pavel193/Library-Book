@@ -1,7 +1,10 @@
-import { wrapper } from "../constants.js"
+import { containerCard } from "../constants.js"
+import { searchingBook } from "../functions.js"
+import { renderSearchCard } from "../bookCard.js"
 
 export function renderSearchBook() {
     const container = document.createElement('div')
+    container.style.width = '100%'
     container.innerHTML = `
         <div class="search">
                 <input type="search" class="search_inp">
@@ -12,5 +15,9 @@ export function renderSearchBook() {
             <div class="search_books"></div>
         </div>
     `
-    wrapper.append(container)
+    const search_container = container.querySelector('.search_container')
+    const searchBook = container.querySelector('.search_inp')
+    searchBook.addEventListener('input', (e) => searchingBook(e, renderSearchCard, search_container))
+    // modal.addEventListener('click', closeModal)
+    containerCard.append(container)
 }

@@ -197,7 +197,6 @@
     }
 
     .search {
-        margin-top: 70px;
         height: 30px;
         position: relative;
         overflow: hidden;
@@ -213,7 +212,7 @@
     .search_container {
         position: relative;
         width: 100%;
-        height: calc(100vh - 225px);
+        height: calc(100vh - 145px);
         border-radius: 10px;
         padding: 15px;
     }

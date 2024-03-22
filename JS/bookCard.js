@@ -37,7 +37,7 @@ export function renderLikeCard (cardData, index){
         <button class="deleteBook ">Удалить</button>
     </div>
     `
-    containerCardLike.append(card)
+    containerCard.append(card)
     return card
 }
 
