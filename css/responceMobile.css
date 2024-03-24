@@ -129,7 +129,8 @@
         padding: 16px;
         overflow: hidden;
         width: 100%;
-        min-height: 100px;
+        height: 100px;
+        margin-top: 20px;
         
     }
     .likeBook_author {
@@ -248,4 +249,7 @@
         font-size: 2vh;
     }
 
+    .saved_container{
+        width: 100%;
+    }
 }

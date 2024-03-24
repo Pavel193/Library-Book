@@ -3,6 +3,8 @@ import { renderHome } from "./home.js"
 import { wrapper } from "../constants.js"
 import { renderSavedBook } from "./savedBook.js"
 import { renderProfile } from "./profile.js"
+import { authorizationRender } from "./authorization.js"
+import { registratedRender } from "./registrated.js"
 
 export const state = {
     '/search' : {
@@ -25,6 +27,16 @@ export const state = {
         renderFunc : () => renderProfile()
     },
 
+    '/authorization' : {
+        href: '/authorization',
+        renderFunc : () => authorizationRender()
+    },
+
+    '/registrated' : {
+        href: '/registrated',
+        renderFunc : () => registratedRender()
+    },
+
     clearWrapper: function (){
         wrapper.children[1].innerHTML = ''
     },
@@ -32,5 +44,7 @@ export const state = {
         state['/'].renderFunc()
     }
 }
+
+
 
 state.init()

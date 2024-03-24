@@ -1,4 +1,4 @@
-import { containerCard, containerCardLike, containerSearchBooks } from "./constants.js";
+import { containerCard, } from "./constants.js";
 
 export function renderBookCard (cardData, index){
     const distant = 10
@@ -24,7 +24,7 @@ export function renderBookCard (cardData, index){
 }
 
 
-export function renderLikeCard (cardData, index){
+export function renderLikeCard (cardData, containerCard){
 
     const card = document.createElement('div')
     card.classList.add('likedBook')
@@ -41,7 +41,7 @@ export function renderLikeCard (cardData, index){
     return card
 }
 
-export function renderSearchCard(cardData, openModal){
+export function renderSearchCard(cardData, openModal, containerSearchBooks){
     const card = document.createElement('div')
     card.classList.add('search_book')
     card.innerHTML = `

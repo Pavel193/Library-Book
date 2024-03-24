@@ -94,23 +94,21 @@ export function backPage(){
     
 }
 
-export function searchingBook(event, render, containerSearchBooks){
-    containerSearchBooks.innerHTML = ''
+export function searchingBook(event, render, container){
+    container.innerHTML = ''
     const input = event.target
     const value = new RegExp(input.value.toLowerCase())// new RegExp - создание регулярного выражения из строки (нужно для использования методов test match replace)
     const filterBooks = arrBook.filter((item) => {
       return value.test(item.author.toLowerCase()) || value.test(item.name.toLowerCase())
     })  // test - Метод для регулярных выражений поиска подстроки в строке (может найти букву в слове , либо предложение) 
-    filterBooks.forEach((item) => render(item, openModal))
+    filterBooks.forEach((item) => render(item, openModal, container))
     console.log(filterBooks);
 }
 
 
 export function changePage(item){
     const itemPath = item.getAttribute('data-href')
-    // console.log(itemPath)
     state.clearWrapper()
     state[itemPath].renderFunc()
-    // window.history.pushState('page2', 'Title', itemPath);
-    // window.dispatchEvent(new Event('popstate'));
+  
 }

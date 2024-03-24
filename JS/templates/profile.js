@@ -1,4 +1,5 @@
 import { getUserData } from "../middleware/user.js"
+import { changePage } from "../functions.js"
 import { containerCard } from "../constants.js"
 
 export function renderProfile() {
@@ -8,8 +9,8 @@ export function renderProfile() {
     <div class="regWindow">
         <div class="blur_container"></div>
         <div class="registratedUser">
-            <a href="./authorization.html" class="registratedUserLink">Sign in</a>
-            <a href="./registrated.html" class="registratedUserLink">Sign up</a>
+            <button data-href="/authorization" class="registratedUserLink">Sign in</button>
+            <button data-href="/registrated" class="registratedUserLink">Sign up</button>
         </div>
         <div class="dataUser">
             <div class="userAvatar"></div>
@@ -23,15 +24,18 @@ export function renderProfile() {
     const registratedUser = div.querySelector('.registratedUser')
     const exitBtn = div.querySelector('.exitBtn')
     const dataUser = div.querySelector('.dataUser')
-
+    const navs = div.querySelectorAll('.registratedUserLink')
     containerCard.append(div)
     
     function userCheck(user){
         return !!user
     }
+
     
     const user = getUserData()
     userCheck(user) ? registratedUser.classList.add('none') : dataUser.classList.add('none')
+
+    navs.forEach((item)=> item.addEventListener('click', () => changePage(item)))    
 
     exitBtn.addEventListener('click', () => {
         localStorage.removeItem('user')
